@@ -89,9 +89,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mD8-jw-iTc">
+                                <rect key="frame" x="928" y="508" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-Bg-mrP">
+                                <rect key="frame" x="1388" y="944" width="618" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40234375" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7uo-24-4LA"/>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="mD8-jw-iTc" id="c4D-0R-1hY"/>
+                        <outlet property="creditLabel" destination="M3m-Bg-mrP" id="Zhj-Ld-5k9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIC-DM-yPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

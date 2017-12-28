@@ -9,5 +9,6 @@
 import UIKit
 
 class ImagesViewController: UIViewController {
-
+    @IBOutlet var activitySpinner: UIActivityIndicatorView!
+    @IBOutlet var creditLabel: UILabel!
 }
