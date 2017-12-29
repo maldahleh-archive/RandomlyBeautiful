@@ -28,5 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         vc.category = categories[indexPath.row]
+        
+        present(vc, animated: true, completion: nil)
     }
 }
