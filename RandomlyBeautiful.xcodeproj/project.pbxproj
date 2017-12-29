@@ -12,6 +12,7 @@
 		4AA00FCA1FEED7D8004BC1AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA00FC81FEED7D8004BC1AC /* Main.storyboard */; };
 		4AA00FCC1FEED7D8004BC1AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA00FCB1FEED7D8004BC1AC /* Assets.xcassets */; };
 		4AD413001FF464A800895B6F /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD412FF1FF464A800895B6F /* ImagesViewController.swift */; };
+		4AD6B5221FF5DA36009E3CA5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD6B5211FF5DA35009E3CA5 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4AA00FCB1FEED7D8004BC1AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AA00FCD1FEED7D8004BC1AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AD412FF1FF464A800895B6F /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		4AD6B5211FF5DA35009E3CA5 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				4AD413011FF464B400895B6F /* ViewControllers */,
 				4AA00FC41FEED7D8004BC1AC /* AppDelegate.swift */,
+				4AD6B5211FF5DA35009E3CA5 /* SwiftyJSON.swift */,
 				4AA00FC81FEED7D8004BC1AC /* Main.storyboard */,
 				4AA00FCB1FEED7D8004BC1AC /* Assets.xcassets */,
 				4AA00FCD1FEED7D8004BC1AC /* Info.plist */,
@@ -146,6 +149,7 @@
 				4AD413001FF464A800895B6F /* ImagesViewController.swift in Sources */,
 				4AA00FC71FEED7D8004BC1AC /* ViewController.swift in Sources */,
 				4AA00FC51FEED7D8004BC1AC /* AppDelegate.swift in Sources */,
+				4AD6B5221FF5DA36009E3CA5 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
