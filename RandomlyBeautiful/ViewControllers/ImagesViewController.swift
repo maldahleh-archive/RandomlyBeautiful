@@ -58,9 +58,37 @@ class ImagesViewController: UIViewController {
         guard let image = UIImage(data: imageData) else { return }
         
         DispatchQueue.main.async {
-            self.imageViews[0].image = image
-            self.imageViews[0].alpha = 1
-            self.creditLabel.text = imageCredit
+            self.show(image, credit: imageCredit)
+        }
+    }
+    
+    func show(_ image: UIImage, credit: String) {
+        activitySpinner.stopAnimating()
+        
+        let imageViewToUse = imageViews[imageCounter % imageViews.count]
+        let otherImageView = imageViews[(imageCounter + 1) % imageViews.count]
+        
+        UIView.animate(withDuration: 2.0, animations: {
+            imageViewToUse.image = image
+            imageViewToUse.alpha = 1
+            
+            self.creditLabel.alpha = 0
+            
+            self.view.sendSubview(toBack: otherImageView)
+        }) { _ in
+            self.creditLabel.text = "  \(credit.uppercased())"
+            self.creditLabel.alpha = 1
+            
+            otherImageView.alpha = 0
+            otherImageView.transform = .identity
+            
+            UIView.animate(withDuration: 10.0, animations: {
+                imageViewToUse.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                }) { _ in
+                DispatchQueue.global(qos: .userInteractive).async {
+                    self.downloadImage()
+                }
+            }
         }
     }
 }
