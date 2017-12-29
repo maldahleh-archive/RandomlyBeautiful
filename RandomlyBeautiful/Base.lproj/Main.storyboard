@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Images" id="BYZ-38-t0r" customClass="ViewController" customModule="RandomlyBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomlyBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -72,7 +72,7 @@
         <!--Images View Controller-->
         <scene sceneID="IKr-DD-Xcr">
             <objects>
-                <viewController id="34M-xg-Nse" customClass="ImagesViewController" customModule="RandomlyBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Images" id="34M-xg-Nse" customClass="ImagesViewController" customModule="RandomlyBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9BU-Su-ZIK"/>
                         <viewControllerLayoutGuide type="bottom" id="R35-M9-GGr"/>

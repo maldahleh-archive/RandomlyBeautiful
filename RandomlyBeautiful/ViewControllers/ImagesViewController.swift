@@ -15,6 +15,7 @@ class ImagesViewController: UIViewController {
     let appID = "2663fbdc32f24e9786890858bfab5ffc029602abdce2e9a64e6225612b41697e"
     var category: String?
     
+    var imageCounter = 0
     var imageViews: [UIImageView] = []
     var images: [JSON] = []
     
@@ -24,7 +25,7 @@ class ImagesViewController: UIViewController {
         imageViews = view.subviews.flatMap { $0 as? UIImageView }
         imageViews.forEach { $0.alpha = 0 }
         
-        creditLabel.alpha = 9
+        creditLabel.alpha = 0
         creditLabel.clipsToBounds = true
         creditLabel.layer.cornerRadius = 15
         
@@ -45,6 +46,21 @@ class ImagesViewController: UIViewController {
     }
     
     func downloadImage() {
+        let currentImage = images[imageCounter % images.count]
         
+        let imageName = currentImage["urls"]["full"].stringValue
+        let imageCredit = currentImage["user"]["name"].stringValue
+        imageCounter += 1
+        
+        guard let imageURL = URL(string: imageName) else { return }
+        guard let imageData = try? Data(contentsOf: imageURL) else { return }
+        
+        guard let image = UIImage(data: imageData) else { return }
+        
+        DispatchQueue.main.async {
+            self.imageViews[0].image = image
+            self.imageViews[0].alpha = 1
+            self.creditLabel.text = imageCredit
+        }
     }
 }
