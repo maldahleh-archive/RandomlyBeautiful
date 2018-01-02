@@ -19,6 +19,8 @@ class ImagesViewController: UIViewController {
     var imageViews: [UIImageView] = []
     var images: [JSON] = []
     
+    var continueDownload = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
