@@ -38,6 +38,12 @@ class ImagesViewController: UIViewController {
         }
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        continueDownload = false
+    }
+    
     func fetch(_ url: URL) {
         if let data = try? Data(contentsOf: url) {
             let json = JSON(data)
@@ -88,7 +94,9 @@ class ImagesViewController: UIViewController {
                 imageViewToUse.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                 }) { _ in
                 DispatchQueue.global(qos: .userInteractive).async {
-                    self.downloadImage()
+                    if continueDownload {
+                        self.downloadImage()
+                    }
                 }
             }
         }
